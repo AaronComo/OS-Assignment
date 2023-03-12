@@ -1,1 +1,0 @@
-cmd_/home/parallels/OS_Assignment1/module/Module.symvers := sed 's/\.ko$$/\.o/' /home/parallels/OS_Assignment1/module/modules.order | scripts/mod/modpost -m -a  -o /home/parallels/OS_Assignment1/module/Module.symvers -e -i Module.symvers   -T -
