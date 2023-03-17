@@ -5,14 +5,16 @@
 static int dp[MAX_SIZE], i, len;
 void *fibonacci(void *);
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     scanf("%d", &len);
     pthread_t tid;
     pthread_attr_t attr;
     pthread_attr_init(&attr);
     pthread_create(&tid, &attr, fibonacci, NULL);
     pthread_join(tid, NULL);
-    printf("%d\n", dp[i - 1]);
+    for (i = 1; i < len; i++)
+        printf("%d ", dp[i]);
+    printf("\n");
     return 0;
 }
 
