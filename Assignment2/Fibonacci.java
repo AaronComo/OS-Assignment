@@ -18,7 +18,7 @@ public class Fibonacci extends Thread {
         }
     }
 
-    public int[] returnData() {
+    public int[] getData() {
         return dp;
     }
 
@@ -27,7 +27,7 @@ public class Fibonacci extends Thread {
         int len = in.nextInt();
         Fibonacci f = new Fibonacci(len);
         f.run();
-        System.out.println(Arrays.toString(f.returnData()));
+        System.out.println(Arrays.toString(f.getData()));
         in.close();
     }
 }
