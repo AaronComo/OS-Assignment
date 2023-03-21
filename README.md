@@ -9,11 +9,12 @@
 
 ### Note
 
-- `kallsyms_lookup_name` was no longer export after version `5.7`
+- `kallsyms_lookup_name` was no longer export after version `5.7`.
 - use `kprobe` to find unexported kernel function. 
 
 
 
 ## Assignment 2
 
-Implement thread based Fibonacci number calculation program, using `Java` and `C`.
+- Implement thread based Fibonacci number calculation program, using `Java` and `C`.
+- Encapsulate `<pthread.h>` into `thread.h`.
