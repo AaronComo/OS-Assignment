@@ -1,27 +1,26 @@
 #include <stdio.h>
-#include <pthread.h>
+#include "thread.h"
 
 #define MAX_SIZE 1024
 static int dp[MAX_SIZE], i, len;
-void *fibonacci(void *);
+void fibonacci(int);
 
-int main(int argc, char *argv[]) {
+int main() {
     scanf("%d", &len);
-    pthread_t tid;
-    pthread_attr_t attr;
-    pthread_attr_init(&attr);
-    pthread_create(&tid, &attr, fibonacci, NULL);
-    pthread_join(tid, NULL);
+    
+    wait(create(fibonacci));
+    
     for (i = 1; i < len; i++)
         printf("%d ", dp[i]);
     printf("\n");
     return 0;
 }
 
-void *fibonacci(void *arg) {
-    dp[0] = 0; dp[1] = 1;
+void fibonacci(int id) {
+    printf("thread id: %d\n", id);
+    dp[0] = 0;
+    dp[1] = 1;
     for (i = 2; i < len; i++) {
         dp[i] = dp[i - 1] + dp[i - 2];
     }
-    pthread_exit(NULL);
 }
