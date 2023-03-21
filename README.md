@@ -17,4 +17,6 @@
 ## Assignment 2
 
 - Implement thread based Fibonacci number calculation program, using `Java` and `C`.
-- Encapsulate `<pthread.h>` into `thread.h`.
+- Encapsulate `<pthread.h>` into `thread.h`. Available APIs: 
+  - `int create(void *func);`
+  - `void wait(int id);`
