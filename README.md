@@ -20,3 +20,13 @@
 - Encapsulate `<pthread.h>` into `thread.h`. Available APIs: 
   - `int create(void *func);`
   - `void wait(int id);`
+
+
+## Assignment 3
+
+- Implement dynamic extended thread pool.
+- Customize macro `BLOCK_SIZE` to fit your own needs. Default: 64.
+- Available APIs: 
+  - `int create(void *func);`
+  - `void wait(int id);`
+- A possible solution to Dining Philosophers problem.
