@@ -9,8 +9,8 @@
 
 ### Note
 
-- `kallsyms_lookup_name` was no longer export after version `5.7`.
-- use `kprobe` to find unexported kernel function. 
+- `kallsyms_lookup_name` was no longer export after version `5.7`. Therefore we cannot find any kernel function easily.
+- To tackle it, we can use `kprobe`, another exported method to find unexported kernel function. 
 
 
 
